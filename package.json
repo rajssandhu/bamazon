@@ -1,0 +1,24 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "online storefront",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajssandhu/bamazon.git"
+  },
+  "author": "Raj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rajssandhu/bamazon/issues"
+  },
+  "homepage": "https://github.com/rajssandhu/bamazon#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "inquirer": "^6.1.0",
+    "mysql": "^2.16.0"
+  }
+}
