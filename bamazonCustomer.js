@@ -6,7 +6,7 @@ const  connection = mysql.createConnection({
 	host: 'localhost',
 	port: 3306,
 	user: 'root',
-	password: '',
+	password: 'root',
 	database: 'bamazon'
 });
 
@@ -38,7 +38,7 @@ function purchasePrompt(){
 	{
 		name: "ID",
 		type: "input",
-		message:"Please enter the Item ID of your purhcase.",
+		message:"Please enter the Item ID of your purhcase:",
 		filter:Number
 	},
 	{
@@ -61,7 +61,7 @@ function purchaseOrder(ID, amtNeeded){
 		if(amtNeeded <= res[0].stock_quantity){
 			var totalCost = res[0].price * amtNeeded;
 			console.log("Your order is in stock!");
-			console.log("Your total cost for " + amtNeeded + " " +res[0].product_name + " is " + totalCost + " Thank you!");
+			console.log("Your total cost for " + amtNeeded + " " +res[0].product_name + " is " + totalCost + " . Thank you!");
 
 			connection.query("UPDATE products SET stock_quantity = stock_quantity - " + amtNeeded + "WHERE item_id = " + ID);
 		} else{
